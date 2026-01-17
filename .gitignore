@@ -1,0 +1,27 @@
+# OS files
+.DS_Store
+Thumbs.db
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build output
+dist/
+build/
+.cache/
+
+# Logs
+*.log
+npm-debug.log*

@@ -1,0 +1,208 @@
+// ===========================
+// Digital Forensic HQ - JavaScript
+// ===========================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize mobile menu
+    initMobileMenu();
+    
+    // Initialize report button
+    initReportButton();
+    
+    // Initialize form submission
+    initContactForm();
+    
+    // Add scroll effects
+    initScrollEffects();
+});
+
+// Mobile Menu Toggle
+function initMobileMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (!hamburger) return;
+    
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    
+    // Close menu when a link is clicked
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+}
+
+// Report Button Handler
+function initReportButton() {
+    const reportBtn = document.querySelector('.cta-button');
+    
+    reportBtn.addEventListener('click', function() {
+        // Scroll to contact section
+        const contactSection = document.getElementById('contact');
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        
+        // Optional: Show alert
+        setTimeout(() => {
+            alert('Please fill out the inquiry form below to report a crime or contact us.');
+        }, 500);
+    });
+}
+
+// Contact Form Submission
+function initContactForm() {
+    const contactForm = document.querySelector('.contact-form');
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const name = this.querySelector('input[type="text"]').value;
+        const email = this.querySelector('input[type="email"]').value;
+        const message = this.querySelector('textarea').value;
+        
+        // Validate form
+        if (!name.trim() || !email.trim() || !message.trim()) {
+            alert('Please fill out all fields.');
+            return;
+        }
+        
+        // Validate email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+        
+        // Show success message
+        showNotification('Inquiry submitted successfully! We will contact you soon.');
+        
+        // Reset form
+        this.reset();
+    });
+}
+
+// Scroll Effects
+function initScrollEffects() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all cards and items
+    const cards = document.querySelectorAll('.feature-card, .investigation-item, .threat-card');
+    cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+    });
+}
+
+// Notification System
+function showNotification(message) {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, #00d4ff, #ff006e);
+        color: #0a0e27;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+        z-index: 10000;
+        animation: slideIn 0.3s ease;
+    `;
+    
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    // Remove after 4 seconds
+    setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }, 4000);
+}
+
+// Add animation styles
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
+
+// Smooth scroll polyfill for older browsers
+if (!('scrollBehavior' in document.documentElement.style)) {
+    function smoothScroll(element) {
+        const target = document.querySelector(element);
+        if (target) {
+            const targetPosition = target.offsetTop;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const duration = 1000;
+            let start = null;
+            
+            window.requestAnimationFrame(function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                const scrollAmount = (progress / duration) * distance;
+                window.scrollTo(0, startPosition + scrollAmount);
+                
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            });
+        }
+    }
+}
+
+// Add loading animation on page load
+window.addEventListener('load', function() {
+    document.body.style.opacity = '1';
+});
+
+// Initialize page
+document.body.style.opacity = '0';
+document.body.style.transition = 'opacity 0.5s ease';
