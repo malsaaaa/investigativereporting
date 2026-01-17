@@ -3,6 +3,9 @@
 // ===========================
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Set current date
+    setCurrentDate();
+    
     // Initialize mobile menu
     initMobileMenu();
     
@@ -15,6 +18,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add scroll effects
     initScrollEffects();
 });
+
+// Set Current Date
+function setCurrentDate() {
+    const dateElement = document.getElementById('current-date');
+    const storyDateElement = document.getElementById('story-date');
+    
+    const today = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const dateString = today.toLocaleDateString('en-MY', options);
+    
+    if (dateElement) dateElement.textContent = dateString;
+    if (storyDateElement) storyDateElement.textContent = dateString;
+}
 
 // Mobile Menu Toggle
 function initMobileMenu() {
@@ -40,16 +56,19 @@ function initMobileMenu() {
 
 // Report Button Handler
 function initReportButton() {
-    const reportBtn = document.querySelector('.cta-button');
+    const reportBtn = document.querySelector('.read-button');
+    
+    if (!reportBtn) return;
     
     reportBtn.addEventListener('click', function() {
         // Scroll to contact section
         const contactSection = document.getElementById('contact');
         contactSection.scrollIntoView({ behavior: 'smooth' });
         
-        // Optional: Show alert
+        // Focus on form
         setTimeout(() => {
-            alert('Please fill out the inquiry form below to report a crime or contact us.');
+            const firstInput = document.querySelector('.contact-form input');
+            if (firstInput) firstInput.focus();
         }, 500);
     });
 }
@@ -58,11 +77,12 @@ function initReportButton() {
 function initContactForm() {
     const contactForm = document.querySelector('.contact-form');
     
+    if (!contactForm) return;
+    
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
         // Get form data
-        const formData = new FormData(this);
         const name = this.querySelector('input[type="text"]').value;
         const email = this.querySelector('input[type="email"]').value;
         const message = this.querySelector('textarea').value;
@@ -105,7 +125,7 @@ function initScrollEffects() {
     }, observerOptions);
     
     // Observe all cards and items
-    const cards = document.querySelectorAll('.feature-card, .investigation-item, .threat-card');
+    const cards = document.querySelectorAll('.service-card, .why-item, .threat-item');
     cards.forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
@@ -122,14 +142,14 @@ function showNotification(message) {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: linear-gradient(135deg, #00d4ff, #ff006e);
-        color: #0a0e27;
+        background: #c70c0c;
+        color: #ffffff;
         padding: 1rem 2rem;
-        border-radius: 5px;
+        border-radius: 3px;
         font-weight: bold;
         text-transform: uppercase;
-        letter-spacing: 1px;
-        box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+        letter-spacing: 0.5px;
+        box-shadow: 0 5px 15px rgba(199, 12, 12, 0.3);
         z-index: 10000;
         animation: slideIn 0.3s ease;
     `;
