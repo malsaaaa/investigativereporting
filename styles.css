@@ -479,6 +479,31 @@ body {
     margin: 0 auto;
 }
 
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header .section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta), var(--accent-cyan));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
 .content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -594,6 +619,14 @@ body {
 
 /* Responsive Design for Content Section */
 @media (max-width: 1024px) {
+    .section-header {
+        margin-bottom: 3rem;
+    }
+
+    .section-header .section-title {
+        font-size: 2rem;
+    }
+
     .content-card.featured {
         grid-column: span 1;
     }
@@ -606,6 +639,18 @@ body {
 @media (max-width: 768px) {
     .content-section {
         padding: 3rem 1.5rem;
+    }
+
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-header .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
     }
 
     .content-grid {
@@ -629,6 +674,18 @@ body {
 @media (max-width: 480px) {
     .content-section {
         padding: 2rem 1rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .section-header .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
     }
 
     .content-grid {
