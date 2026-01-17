@@ -617,6 +617,19 @@ body {
     color: var(--accent-cyan);
 }
 
+.content-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: var(--accent-magenta);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(255, 0, 110, 0.3);
+    width: 100%;
+}
+
 /* Responsive Design for Content Section */
 @media (max-width: 1024px) {
     .section-header {
