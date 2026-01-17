@@ -1069,6 +1069,23 @@ body {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+    .hero {
+        min-height: 80vh;
+        padding: 2rem 0;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .neon-lines {
+        display: none;
+    }
+
     .nav-menu {
         display: none;
         position: fixed;
@@ -1166,65 +1183,118 @@ body {
 }
 
 @media (max-width: 480px) {
-    .nav-logo {
-        font-size: 1.2rem;
+    body {
+        font-size: 14px;
     }
 
-    .top-bar {
-        padding: 0.5rem 0;
-        font-size: 0.75rem;
+    .hero {
+        min-height: 60vh;
+        padding: 1rem 0;
     }
 
-    .story-title {
-        font-size: 1.5rem;
-    }
-
-    .story-subtitle {
-        font-size: 1rem;
-    }
-
-    .section-title {
-        font-size: 1.4rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .service-card,
-    .threat-item,
-    .detail-item {
-        padding: 1.5rem;
-    }
-
-    .services-section,
-    .why-choose,
-    .threats-section,
-    .contact-section {
+    .hero-content {
         padding: 2rem 1rem;
     }
 
-    .read-button {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.85rem;
+    .hero-title {
+        font-size: 1.8rem;
+        line-height: 1.3;
     }
 
-    .why-number {
-        font-size: 2rem;
+    .hero-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
     }
 
-    .submit-button {
+    .cta-button {
         padding: 0.75rem 1.5rem;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
+    }
+
+    .nav-logo {
+        font-size: 1rem;
     }
 
     .nav-container {
         padding: 0.8rem 1rem;
     }
 
+    .top-bar {
+        padding: 0.4rem 0;
+        font-size: 0.7rem;
+    }
+
     .featured-story {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .story-title {
+        font-size: 1.5rem;
+        letter-spacing: 0px;
+    }
+
+    .story-subtitle {
+        font-size: 0.95rem;
     }
 
     .story-excerpt {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0px;
+    }
+
+    .service-card,
+    .threat-item,
+    .detail-item {
+        padding: 1.2rem;
+    }
+
+    .service-title,
+    .threat-title {
         font-size: 1rem;
+    }
+
+    .services-section,
+    .why-choose,
+    .threats-section,
+    .contact-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .read-button {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.85rem;
+    }
+
+    .why-number {
+        font-size: 1.8rem;
+    }
+
+    .why-title {
+        font-size: 1rem;
+    }
+
+    .submit-button {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.85rem;
+    }
+
+    .contact-form {
+        gap: 1rem;
+    }
+
+    input,
+    textarea {
+        font-size: 16px;
+    }
+
+    .footer-content p {
+        font-size: 0.85rem;
     }
 }
 
