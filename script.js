@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize mobile menu
     initMobileMenu();
     
+    // Initialize explore button
+    initExploreButton();
+    
     // Initialize report button
     initReportButton();
     
@@ -60,6 +63,20 @@ function initMobileMenu() {
         if (!e.target.closest('.navbar')) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+        }
+    });
+}
+
+// Explore Button Handler - Scroll to Content
+function initExploreButton() {
+    const exploreBtn = document.querySelector('.cta-button');
+    
+    if (!exploreBtn) return;
+    
+    exploreBtn.addEventListener('click', function() {
+        const contentSection = document.getElementById('content');
+        if (contentSection) {
+            contentSection.scrollIntoView({ behavior: 'smooth' });
         }
     });
 }
