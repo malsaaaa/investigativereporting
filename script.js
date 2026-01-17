@@ -46,47 +46,10 @@ function initMobileMenu() {
         navMenu.classList.toggle('active');
     });
     
-    // Handle dropdown toggle on mobile
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                // Close other dropdowns
-                const allDropdowns = document.querySelectorAll('.dropdown');
-                allDropdowns.forEach(dd => {
-                    if (dd !== this.closest('.dropdown')) {
-                        dd.classList.remove('active');
-                    }
-                });
-                
-                // Toggle current dropdown
-                const dropdown = this.closest('.dropdown');
-                dropdown.classList.toggle('active');
-            }
-        });
-    });
-    
-    // Handle dropdown menu item clicks
-    const dropdownLinks = document.querySelectorAll('.dropdown-link');
-    dropdownLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                // Allow navigation
-                setTimeout(() => {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                }, 100);
-            }
-        });
-    });
-    
-    // Close menu when a regular link is clicked
-    const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+    // Close menu when a link is clicked
+    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function() {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
         });
