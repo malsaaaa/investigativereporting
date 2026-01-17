@@ -1101,7 +1101,7 @@ body {
     }
 
     .nav-menu {
-        display: none;
+        display: flex;
         position: fixed;
         left: -100%;
         top: 60px;
@@ -1109,10 +1109,12 @@ body {
         background-color: var(--secondary-dark);
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: left 0.3s ease;
         gap: 0;
         border-bottom: 2px solid var(--accent-cyan);
         box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        padding: 0;
+        z-index: 999;
     }
 
     .nav-menu.active {
