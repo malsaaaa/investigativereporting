@@ -3,10 +3,23 @@
   command = ""
   publish = "."
 
-# Redirect all non-matching routes to index.html for SPA compatibility
+# IMPORTANT: Static assets must be handled FIRST, before the catch-all redirect
+# This prevents CSS, JS, and images from being redirected to index.html
+
+# Redirect HTML routes to appropriate pages (for multi-page site)
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/articles"
+  to = "/articles.html"
+  status = 200
+
+[[redirects]]
+  from = "/series"
+  to = "/series.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
   status = 200
 
 # Cache control headers
@@ -16,13 +29,21 @@
     Cache-Control = "public, max-age=3600"
 
 [[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+    Content-Type = "text/css"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+    Content-Type = "application/javascript"
+
+[[headers]]
   for = "/index.html"
   [headers.values]
     Cache-Control = "no-cache"
-
-[[headers]]
-  for = "/styles.css"
-  [headers.values]
     Cache-Control = "public, max-age=31536000"
 
 [[headers]]
