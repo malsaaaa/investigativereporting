@@ -859,6 +859,33 @@ body {
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
+    .dropdown-menu {
+        position: static;
+        display: none;
+        background: rgba(0, 212, 255, 0.05);
+        border: 1px solid rgba(0, 212, 255, 0.3);
+        border-top: none;
+        box-shadow: none;
+        min-width: auto;
+        margin-top: 0;
+        border-radius: 0;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+        animation: slideDown 0.3s ease;
+    }
+
+    .dropdown-link {
+        text-align: left;
+        padding: 0.8rem 2rem;
+        font-size: 0.85rem;
+    }
+
+    .dropdown-link:hover {
+        background: rgba(0, 212, 255, 0.15);
+    }
+
     .story-title {
         font-size: 2rem;
     }
