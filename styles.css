@@ -1349,16 +1349,15 @@ body {
 .video-teaser-container {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.teaser-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 2rem;
+}
+
+.teaser-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .teaser-label {
@@ -1386,7 +1385,8 @@ body {
     font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.8;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
+    max-width: 600px;
 }
 
 .teaser-video-wrapper {
@@ -1406,11 +1406,6 @@ body {
 }
 
 @media (max-width: 1024px) {
-    .video-teaser-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
     .teaser-title {
         font-size: 2rem;
     }
