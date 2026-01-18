@@ -159,12 +159,83 @@
         </div>
     </section>
 
-    <!-- Scams Section -->
-    <section class="di-section alternate-bg">
+    <!-- Interactive Vulnerability Analysis Section -->
+    <section class="di-section">
         <div class="di-container">
             <div class="section-header-alt">
-                <h2 class="section-title-alt">SCAMS</h2>
+                <h2 class="section-title-alt">VULNERABILITY ANALYSIS: Autofill & Scam Risk</h2>
             </div>
+
+            <p class="di-text">Our survey of 74-108 individuals reveals a critical vulnerability pattern: <span class="highlight-important">users who rely on autofill features for password management are significantly more susceptible to scam attacks</span>. The correlation between convenience and security risk is striking.</p>
+
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <h3 class="chart-title">Have you ever been scammed?</h3>
+                    <p class="chart-subtitle">74 responses</p>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="scamChart"></canvas>
+                    </div>
+                    <div class="chart-stats">
+                        <div class="stat-badge yes">
+                            <span class="stat-value">78.4%</span>
+                            <span class="stat-label">Yes</span>
+                        </div>
+                        <div class="stat-badge no">
+                            <span class="stat-value">10.2%</span>
+                            <span class="stat-label">No</span>
+                        </div>
+                        <div class="stat-badge maybe">
+                            <span class="stat-value">11.4%</span>
+                            <span class="stat-label">Maybe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-divider"></div>
+
+                <div class="chart-wrapper">
+                    <h3 class="chart-title">Do you save passwords using autofill?</h3>
+                    <p class="chart-subtitle">108 responses</p>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="autofillChart"></canvas>
+                    </div>
+                    <div class="chart-stats">
+                        <div class="stat-badge yes">
+                            <span class="stat-value">67.6%</span>
+                            <span class="stat-label">Yes/Ya</span>
+                        </div>
+                        <div class="stat-badge no">
+                            <span class="stat-value">32.4%</span>
+                            <span class="stat-label">No/Tidak</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vulnerability-insight">
+                <h3 class="insight-title">🚨 The Critical Link</h3>
+                <p class="insight-text">When scammers gain access to your browser or device, autofilled passwords become an open gateway. With 67.6% of respondents using autofill and 78.4% reporting scam incidents, the connection is clear:</p>
+                <ul class="insight-list">
+                    <li><strong>Convenience vs. Security:</strong> Autofill saves time but stores sensitive credentials in accessible formats</li>
+                    <li><strong>Phishing Vulnerability:</strong> Malicious websites can trigger autofill, capturing credentials automatically</li>
+                    <li><strong>Device Compromise:</strong> If your device is compromised, autofilled passwords become easy targets</li>
+                    <li><strong>Scammer Access:</strong> Criminals exploit autofilled data to access accounts and conduct identity theft</li>
+                </ul>
+            </div>
+
+            <div class="prevention-box">
+                <h3 class="prevention-title">💡 Best Practices for Protection</h3>
+                <ul class="prevention-list">
+                    <li>❌ Avoid using autofill for sensitive accounts (banking, email, social media)</li>
+                    <li>✅ Use a dedicated password manager with strong encryption</li>
+                    <li>✅ Enable two-factor authentication on all important accounts</li>
+                    <li>✅ Verify URLs before entering passwords manually</li>
+                    <li>✅ Regularly update your browser and operating system</li>
+                    <li>✅ Never autofill on public or shared devices</li>
+                </ul>
+            </div>
+        </div>
+    </section>
             
             <p class="di-text">In light of the RM2.7 billion lost to cybercriminals in 2025, we surveyed <strong>101 individuals</strong> to map out exactly how these scams happen. This infographic breaks down the scam lifecycle, showing you how scammers start their approach.</p>
 
@@ -223,6 +294,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <script src="script.js"></script>
     <script>
         // Initialize mobile menu
@@ -248,6 +320,63 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             initMobileMenu();
+
+            // Initialize Scam Chart
+            const scamCtx = document.getElementById('scamChart').getContext('2d');
+            new Chart(scamCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Yes', 'No', 'Maybe'],
+                    datasets: [{
+                        data: [78.4, 10.2, 11.4],
+                        backgroundColor: [
+                            '#003d9e',
+                            '#c1272d',
+                            '#ffa500'
+                        ],
+                        borderColor: '#0a0e27',
+                        borderWidth: 3,
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            // Initialize Autofill Chart
+            const autofillCtx = document.getElementById('autofillChart').getContext('2d');
+            new Chart(autofillCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Yes/Ya', 'No/Tidak'],
+                    datasets: [{
+                        data: [67.6, 32.4],
+                        backgroundColor: [
+                            '#003d9e',
+                            '#c1272d'
+                        ],
+                        borderColor: '#0a0e27',
+                        borderWidth: 3,
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
         });
     </script>
 </body>
