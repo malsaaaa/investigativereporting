@@ -57,6 +57,14 @@
     font-weight: 600;
 }
 
+.investigation-author {
+    color: var(--accent-cyan);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .share-button {
     background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
     color: var(--primary-dark);

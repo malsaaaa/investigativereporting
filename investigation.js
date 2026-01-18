@@ -5,52 +5,69 @@
 // Investigation Data
 const investigationData = {
     1: {
-        title: "Ransomware Network Dismantled",
-        category: "Investigation",
+        title: "One Click Away: How Data Breaches Turn Users into Scam Victims",
+        author: "Yasmin Damia",
+        category: "Data Breach",
         date: "January 17, 2026",
-        excerpt: "An advanced cyber forensics operation has successfully dismantled a sophisticated ransomware network that was targeting critical infrastructure across multiple countries.",
+        excerpt: "Online Scams Target Victims Through Hacked Accounts and Malicious Links",
         body: `
-            <h2>Overview</h2>
-            <p>Our digital forensics team, working in collaboration with international law enforcement agencies, has completed a comprehensive investigation into a major ransomware operation. The investigation involved advanced forensic techniques, data recovery, and network analysis to trace the threat actors.</p>
+            <h2>Data Breaches and Scam Victims in Malaysia</h2>
+            <p>In Malaysia, data breaches have become a major contributor to the increasing number of scam cases affecting both individuals and businesses.</p>
 
-            <h2>Key Findings</h2>
+            <h2>How Stolen Data is Exploited</h2>
+            <p>When personal data such as names, identification numbers, phone numbers, bank details, and home addresses are leaked due to cyberattacks, insider misuse or weak data protection practices, the information often ends up in the hands of criminal networks.</p>
+
+            <h2>Common Scam Methods</h2>
+            <p>Scammers exploit this stolen data to carry out various forms of fraud including:</p>
             <ul>
-                <li>Successfully identified 47 compromised systems across 12 organizations</li>
-                <li>Recovered critical encrypted data through advanced decryption techniques</li>
-                <li>Traced command and control infrastructure to three primary locations</li>
-                <li>Documented evidence chain maintaining 100% legal compliance</li>
-                <li>Provided detailed forensic reports admissible in court proceedings</li>
+                <li>Phishing emails crafted with personal information</li>
+                <li>Scam calls impersonating trusted organizations</li>
+                <li>Fake investment schemes targeting specific demographics</li>
+                <li>Identity theft using leaked identification numbers</li>
+                <li>Online impersonation through compromised accounts</li>
             </ul>
 
-            <h2>Investigation Methodology</h2>
-            <p>Our team employed state-of-the-art digital forensics tools and techniques including:</p>
+            <h2>How Your Data Gets Compromised</h2>
+            <p>Data breaches occur through multiple vectors:</p>
             <ul>
-                <li>Memory forensics analysis</li>
-                <li>File system reconstruction</li>
-                <li>Network traffic analysis</li>
-                <li>Timeline reconstruction</li>
-                <li>Malware behavior analysis</li>
+                <li>Cyberattacks on company servers and databases</li>
+                <li>Insider threats from employees with malicious intent</li>
+                <li>Weak data protection practices and poor security measures</li>
+                <li>Ransomware attacks that expose sensitive information</li>
+                <li>Third-party vendor vulnerabilities</li>
             </ul>
 
-            <h2>Impact and Results</h2>
-            <p>This investigation demonstrates the critical importance of professional digital forensics in combating cyber crime. Our evidence was instrumental in coordinating with international authorities to shut down the ransomware operation.</p>
+            <h2>The Impact on Victims</h2>
+            <p>When personal information is exposed, individuals become targets for scammers who use the data to craft convincing fraudulent schemes. The combination of personal knowledge and access to multiple data points makes these scams highly effective and difficult for victims to identify as fraudulent.</p>
 
-            <h2>Recommendations</h2>
+            <h2>Protecting Yourself</h2>
             <ul>
-                <li>Implement comprehensive backup and recovery solutions</li>
-                <li>Deploy advanced threat detection systems</li>
-                <li>Conduct regular security audits and penetration testing</li>
-                <li>Establish incident response procedures</li>
-                <li>Train staff on cybersecurity best practices</li>
+                <li>Monitor your accounts regularly for unauthorized activity</li>
+                <li>Use strong, unique passwords for each online account</li>
+                <li>Enable two-factor authentication wherever available</li>
+                <li>Be cautious of unsolicited calls, emails, or messages</li>
+                <li>Register with the National Do Not Call Registry (NDNCR)</li>
+                <li>Check your credit report regularly</li>
+                <li>Report suspicious activity to the authorities immediately</li>
+            </ul>
+
+            <h2>What to Do If You're Compromised</h2>
+            <p>If you believe your data has been compromised:</p>
+            <ul>
+                <li>Change all your passwords immediately</li>
+                <li>Contact your bank and financial institutions</li>
+                <li>Monitor your credit reports for fraud</li>
+                <li>Report the incident to the Malaysian Police (PDRM)</li>
+                <li>Seek assistance from the AKPK (Credit Counselling and Debt Management Agency) if needed</li>
+                <li>Document all fraudulent transactions and communications</li>
             </ul>
         `,
         stats: {
-            compromised: "47",
-            recovered: "2.4 TB",
-            days: "45"
+            breaches: "500K+",
+            victims: "Ongoing",
+            recovered: "In Progress"
         },
-        pdfUrl: "assets/Article-1.pdf",
-        tags: ["ransomware", "cyber-crime", "forensics", "incident-response", "investigation"]
+        tags: ["data-breach", "scam", "fraud", "cybercrime", "protection"]
     },
     2: {
         title: "Data Breach Investigation",
@@ -213,6 +230,16 @@ function loadInvestigation() {
 
     // Set title and meta
     document.getElementById('investigation-title').textContent = data.title;
+    
+    // Set author if it exists
+    const authorElement = document.getElementById('investigation-author');
+    if (data.author) {
+        authorElement.textContent = 'By ' + data.author + ' • ';
+        authorElement.style.display = 'inline';
+    } else {
+        authorElement.style.display = 'none';
+    }
+    
     document.getElementById('investigation-date').textContent = data.date + ' - 2:30 PM';
     document.querySelector('.investigation-category').textContent = data.category;
 
@@ -236,16 +263,6 @@ function loadInvestigation() {
         tagEl.textContent = tag;
         tagsContainer.appendChild(tagEl);
     });
-
-    // Handle PDF download link
-    const pdfLink = document.getElementById('pdf-download-link');
-    if (data.pdfUrl) {
-        pdfLink.href = data.pdfUrl;
-        pdfLink.download = `${data.title}.pdf`;
-        pdfLink.style.display = 'inline';
-    } else {
-        pdfLink.style.display = 'none';
-    }
 
     // Update page title
     document.title = data.title + ' - Digital Forensic HQ';
