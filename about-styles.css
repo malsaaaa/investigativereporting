@@ -65,8 +65,9 @@
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    max-width: 100%;
 }
 
 .team-card {
@@ -90,6 +91,7 @@
     width: 100%;
     aspect-ratio: 9/10;
     background: linear-gradient(135deg, rgba(106, 5, 114, 0.3), rgba(0, 212, 255, 0.1));
+    min-height: 320px;
 }
 
 .team-image {
@@ -204,8 +206,12 @@
     }
 
     .team-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+    }
+
+    .team-image-wrapper {
+        min-height: 240px;
     }
 
     .about-description-container {
@@ -235,6 +241,11 @@
 
     .team-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .team-image-wrapper {
+        min-height: 280px;
     }
 
     .team-card {
