@@ -270,6 +270,28 @@ const investigationData = {
     },
 };
 
+// Dynamically load article data from separate files
+async function loadArticleData() {
+    try {
+        // Load all article files
+        const articles = await Promise.all([
+            import('./articles/article1.js'),
+            import('./articles/article2.js'),
+            import('./articles/article3.js'),
+            import('./articles/article4.js')
+        ]);
+        
+        // Map articles to the data object
+        investigationData[1] = articles[0].article1;
+        investigationData[2] = articles[1].article2;
+        investigationData[3] = articles[2].article3;
+        investigationData[4] = articles[3].article4;
+    } catch (error) {
+        console.warn('Using inline article data:', error);
+        // Fall back to inline data if import fails
+    }
+}
+
 // Get Investigation ID from URL
 function getInvestigationId() {
     const params = new URLSearchParams(window.location.search);
@@ -379,8 +401,9 @@ function setCurrentDate() {
 }
 
 // Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     setCurrentDate();
+    await loadArticleData();
     loadInvestigation();
     initMobileMenu();
 });
