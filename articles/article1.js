@@ -3,7 +3,7 @@ export const article1 = {
     title: "One Click Away: How Data Breaches Turn Users into Scam Victims",
     author: "Yasmin Damia",
     category: "Data Breach",
-    date: "January 17, 2026",
+
     image: "assets/Article 1_image1.png",
     excerpt: "Online Scams Target Victims Through Hacked Accounts and Malicious Links",
     body: `

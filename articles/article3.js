@@ -3,9 +3,9 @@ export const article3 = {
     title: "Cybersecurity's Role in Victim Protection and Recovery",
     author: "Syamilah Yusman and Farzana Rozaidee",
     category: "Cybersecurity",
-    date: "January 12, 2026",
+
     image: "https://via.placeholder.com/1000x600?text=Cybersecurity+Protection",
-    excerpt: "Malaysia's approach to national cybersecurity and digital protection in the era of sophisticated cyber threats.",
+    excerpt: "This article examines the increasing risk of data breaches in Malaysia and emphasizes the vital role that CyberSecurity Malaysia's Cyber999 team plays in victim recovery and protection.",
     body: `
         <p style="text-align: justify;">In an era where the nation's heartbeat is synchronized with digital networks, the line between national security and personal privacy has grown increasingly thin.</p>
 
