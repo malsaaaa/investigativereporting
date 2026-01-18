@@ -70,7 +70,7 @@ export const article3 = {
         <p style="text-align: justify;">On an individual level, the implementation of Multi-Factor Authentication (MFA) and tools like <strong>'Have I Been Pwned' (HIBP)</strong> remain the most effective forms of personal defence.</p>
 
         <div class="image-with-caption">
-            <img src="assets/Article3_NSRC.png" alt="National Scam Response Center Contact Information" class="practices-image" />
+            <img src="assets/Article 3_image1.png" alt="National Scam Response Center Contact Information" class="practices-image" />
             <p class="image-caption">National Scam Response Center - 24/7 Support</p>
         </div>
 
