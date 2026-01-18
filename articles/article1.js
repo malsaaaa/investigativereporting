@@ -80,8 +80,8 @@ export const article1 = {
 
         <p style="text-align: justify;">Beyond financial losses, cyber scams and blackmail cases have severe social and emotional consequences, including family breakdowns and psychological distress.</p>
 
-        <div class="featured-intro-section">
-            <img src="assets/Article 1_image3.png" alt="Best Practices for Online Security" class="intro-image" />
+        <div class="image-with-caption">
+            <img src="assets/Article 1_image3.png" alt="Best Practices for Online Security" class="practices-image" />
             <p class="image-caption">Online Security Tips</p>
         </div>
 

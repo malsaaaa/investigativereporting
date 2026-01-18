@@ -171,6 +171,24 @@
     text-transform: uppercase;
 }
 
+.image-with-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.practices-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 3px;
+    border: 2px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+}
+
 .excerpt-highlight {
     padding: 0;
     background: transparent;
@@ -554,6 +572,11 @@
 
     .featured-intro-section .intro-image {
         height: 250px;
+    }
+
+    .practices-image {
+        max-width: 100%;
+        width: 100%;
     }
 
     .image-caption {
