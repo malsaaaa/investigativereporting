@@ -140,6 +140,43 @@
     z-index: 2;
 }
 
+.featured-intro-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(106, 5, 114, 0.1) 0%, rgba(0, 212, 255, 0.05) 100%);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 5px;
+}
+
+.featured-intro-section .intro-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 2px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+}
+
+.excerpt-highlight {
+    padding: 1.5rem;
+    background: rgba(10, 14, 39, 0.8);
+    border-left: 4px solid var(--accent-magenta);
+    border-radius: 3px;
+}
+
+.excerpt-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-cyan);
+    line-height: 1.6;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+    margin: 0;
+}
+
 .investigation-content {
     grid-column: 1;
 }
@@ -372,6 +409,24 @@
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+    .featured-intro-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .featured-intro-section .intro-image {
+        height: 250px;
+    }
+
+    .excerpt-highlight {
+        padding: 1rem;
+    }
+
+    .excerpt-text {
+        font-size: 1rem;
+    }
+
     .investigation-page {
         padding: 1rem;
     }

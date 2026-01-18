@@ -9,49 +9,23 @@ const investigationData = {
         author: "Yasmin Damia",
         category: "Data Breach",
         date: "January 17, 2026",
-        image: "https://via.placeholder.com/1000x600?text=Data+Breach+Security",
+        image: "assets/Article 1_image1.png",
         excerpt: "Online Scams Target Victims Through Hacked Accounts and Malicious Links",
         body: `
+            <div class="featured-intro-section">
+                <img src="assets/Article 1_image1.png" alt="Data Breach and Scam Victims" class="intro-image" />
+                <div class="excerpt-highlight">
+                    <p class="excerpt-text">Online Scams Target Victims Through Hacked Accounts and Malicious Links</p>
+                </div>
+            </div>
+
             <p>In Malaysia, data breaches have become a major contributor to the increasing number of scam cases affecting both individuals and businesses.</p>
 
             <p>When personal data such as names, identification numbers, phone numbers, bank details, and home addresses are leaked due to cyberattacks, insider misuse or weak data protection practices, the information often ends up in the hands of criminal networks.</p>
 
             <p>Scammers exploit this stolen data to carry out various forms of fraud including phishing emails, scam calls, fake investment schemes, identity theft and online impersonation. </p>
 
-            <h2>How Your Data Gets Compromised</h2>
-            <p>Data breaches occur through multiple vectors:</p>
-            <ul>
-                <li>Cyberattacks on company servers and databases</li>
-                <li>Insider threats from employees with malicious intent</li>
-                <li>Weak data protection practices and poor security measures</li>
-                <li>Ransomware attacks that expose sensitive information</li>
-                <li>Third-party vendor vulnerabilities</li>
-            </ul>
 
-            <h2>The Impact on Victims</h2>
-            <p>When personal information is exposed, individuals become targets for scammers who use the data to craft convincing fraudulent schemes. The combination of personal knowledge and access to multiple data points makes these scams highly effective and difficult for victims to identify as fraudulent.</p>
-
-            <h2>Protecting Yourself</h2>
-            <ul>
-                <li>Monitor your accounts regularly for unauthorized activity</li>
-                <li>Use strong, unique passwords for each online account</li>
-                <li>Enable two-factor authentication wherever available</li>
-                <li>Be cautious of unsolicited calls, emails, or messages</li>
-                <li>Register with the National Do Not Call Registry (NDNCR)</li>
-                <li>Check your credit report regularly</li>
-                <li>Report suspicious activity to the authorities immediately</li>
-            </ul>
-
-            <h2>What to Do If You're Compromised</h2>
-            <p>If you believe your data has been compromised:</p>
-            <ul>
-                <li>Change all your passwords immediately</li>
-                <li>Contact your bank and financial institutions</li>
-                <li>Monitor your credit reports for fraud</li>
-                <li>Report the incident to the Malaysian Police (PDRM)</li>
-                <li>Seek assistance from the AKPK (Credit Counselling and Debt Management Agency) if needed</li>
-                <li>Document all fraudulent transactions and communications</li>
-            </ul>
         `,
         stats: {
             breaches: "500K+",
