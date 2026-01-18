@@ -80,31 +80,9 @@ export const article1 = {
 
         <p style="text-align: justify;">Beyond financial losses, cyber scams and blackmail cases have severe social and emotional consequences, including family breakdowns and psychological distress.</p>
 
-        <div class="security-best-practices">
-            <h3 class="best-practices-title">CYBERSECURITY BEST PRACTICES</h3>
-            <div class="practices-grid">
-                <div class="practice-item">
-                    <div class="practice-number">1</div>
-                    <div class="practice-text">Use strong, unique passwords</div>
-                </div>
-                <div class="practice-item">
-                    <div class="practice-number">2</div>
-                    <div class="practice-text">Enable two-factor authentication</div>
-                </div>
-                <div class="practice-item">
-                    <div class="practice-number">3</div>
-                    <div class="practice-text">Avoid public Wi-Fi for sensitive tasks</div>
-                </div>
-                <div class="practice-item">
-                    <div class="practice-number">4</div>
-                    <div class="practice-text">Keep software and apps updated</div>
-                </div>
-                <div class="practice-item">
-                    <div class="practice-number">5</div>
-                    <div class="practice-text">Be cautious with suspicious links</div>
-                </div>
-            </div>
-            <p class="practices-subtitle"><em>Online Security Tips</em></p>
+        <div class="featured-intro-section">
+            <img src="assets/Article 1_image3.png" alt="Best Practices for Online Security" class="intro-image" />
+            <p class="image-caption">Online Security Tips</p>
         </div>
 
         <p style="text-align: justify;">Users are advised to limit the exposure of personal data by avoiding the use of full legal names on social media, using privacy settings effectively, and disabling open invitations on platforms such as Telegram.</p>

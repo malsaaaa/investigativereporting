@@ -161,6 +161,16 @@
     box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
 }
 
+.image-caption {
+    text-align: center;
+    color: var(--accent-cyan);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 .excerpt-highlight {
     padding: 0;
     background: transparent;
@@ -544,6 +554,11 @@
 
     .featured-intro-section .intro-image {
         height: 250px;
+    }
+
+    .image-caption {
+        font-size: 0.85rem;
+        margin-top: 10px;
     }
 
     .excerpt-highlight {
