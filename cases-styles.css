@@ -1,0 +1,377 @@
+/* ===== CASES PAGE STYLES ===== */
+
+/* Cases Header */
+.cases-header {
+    background: linear-gradient(135deg, rgba(106, 5, 114, 0.4) 0%, rgba(0, 212, 255, 0.15) 100%);
+    padding: 4rem 2rem;
+    border-bottom: 3px solid var(--accent-magenta);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cases-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%2300d4ff" opacity="0.1"/><circle cx="80" cy="80" r="2" fill="%23ff006e" opacity="0.1"/></svg>') repeat;
+    pointer-events: none;
+}
+
+.cases-header-content {
+    position: relative;
+    z-index: 10;
+}
+
+.cases-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+    margin-bottom: 1rem;
+}
+
+.cases-subtitle {
+    font-size: 1.3rem;
+    color: var(--accent-cyan);
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+/* Cases Sections */
+.cases-section {
+    background: var(--primary-dark);
+    padding: 4rem 2rem;
+    border-bottom: 2px solid rgba(0, 212, 255, 0.1);
+}
+
+.cases-section.case-odd {
+    background: linear-gradient(135deg, rgba(106, 5, 114, 0.15) 0%, rgba(0, 212, 255, 0.05) 100%);
+}
+
+.cases-section.case-even {
+    background: var(--primary-dark);
+}
+
+.cases-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-header-alt {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--accent-cyan);
+}
+
+.section-title-alt {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--accent-cyan);
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+/* Cases Intro */
+.cases-intro {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Case Card */
+.case-card {
+    position: relative;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(106, 5, 114, 0.2) 0%, rgba(0, 212, 255, 0.05) 100%);
+    border: 2px solid rgba(0, 212, 255, 0.2);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.case-card:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3), inset 0 0 20px rgba(0, 212, 255, 0.05);
+    transform: translateY(-5px);
+}
+
+.case-number {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--accent-magenta);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 0, 110, 0.3);
+}
+
+.case-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+/* Case Image */
+.case-image-wrapper {
+    margin: 2rem 0;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+}
+
+.case-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.case-card:hover .case-image {
+    transform: scale(1.02);
+}
+
+/* Case Text */
+.case-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.case-text strong {
+    color: var(--accent-magenta);
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(255, 0, 110, 0.2);
+}
+
+/* Case Read More */
+.case-read-more {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.case-link {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.case-link:hover {
+    color: var(--accent-magenta);
+    text-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
+    margin-right: -5px;
+}
+
+/* Takeaways Section */
+.takeaways-section {
+    background: linear-gradient(135deg, rgba(106, 5, 114, 0.2) 0%, rgba(0, 212, 255, 0.1) 100%);
+}
+
+.takeaways-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.takeaway-card {
+    background: rgba(10, 14, 39, 0.6);
+    border: 2px solid rgba(0, 212, 255, 0.2);
+    border-radius: 5px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.takeaway-card:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.takeaway-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.takeaway-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+.takeaway-text {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Back to Home */
+.back-to-home {
+    background: var(--primary-dark);
+    padding: 2rem;
+    text-align: center;
+    border-top: 2px solid rgba(0, 212, 255, 0.1);
+}
+
+.back-link {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.back-link:hover {
+    color: var(--accent-magenta);
+    text-shadow: var(--neon-glow-magenta);
+    margin-left: -5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cases-title {
+        font-size: 2.2rem;
+        letter-spacing: 1.5px;
+    }
+
+    .cases-subtitle {
+        font-size: 1rem;
+    }
+
+    .cases-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .section-title-alt {
+        font-size: 1.5rem;
+    }
+
+    .case-title {
+        font-size: 1.4rem;
+    }
+
+    .case-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .takeaways-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .takeaway-card {
+        padding: 1.5rem;
+    }
+
+    .takeaway-icon {
+        font-size: 2.5rem;
+    }
+
+    .takeaway-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cases-header {
+        padding: 2rem 1rem;
+    }
+
+    .cases-title {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+
+    .cases-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .cases-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .section-title-alt {
+        font-size: 1.2rem;
+        border-bottom: 2px solid var(--accent-cyan);
+        padding-bottom: 1rem;
+    }
+
+    .case-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .case-number {
+        font-size: 0.75rem;
+    }
+
+    .case-title {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .case-image-wrapper {
+        margin: 1rem 0;
+    }
+
+    .case-text {
+        font-size: 0.9rem;
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    .case-link {
+        font-size: 0.95rem;
+    }
+
+    .takeaways-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .takeaway-card {
+        padding: 1rem;
+    }
+
+    .takeaway-icon {
+        font-size: 2rem;
+    }
+
+    .takeaway-title {
+        font-size: 1rem;
+    }
+
+    .takeaway-text {
+        font-size: 0.9rem;
+    }
+}
