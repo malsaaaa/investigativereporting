@@ -181,7 +181,7 @@
 
 .practices-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 250px;
     height: auto;
     object-fit: contain;
     border-radius: 3px;
@@ -194,6 +194,12 @@
     background: transparent;
     border-left: none;
     border-radius: 0;
+}
+
+.highlight-important {
+    color: var(--accent-magenta);
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 0, 110, 0.3);
 }
 
 .excerpt-text {
