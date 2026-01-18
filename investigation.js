@@ -49,6 +49,7 @@ const investigationData = {
             recovered: "2.4 TB",
             days: "45"
         },
+        pdfUrl: "assets/Article-1.pdf",
         tags: ["ransomware", "cyber-crime", "forensics", "incident-response", "investigation"]
     },
     2: {
@@ -235,6 +236,16 @@ function loadInvestigation() {
         tagEl.textContent = tag;
         tagsContainer.appendChild(tagEl);
     });
+
+    // Handle PDF download link
+    const pdfLink = document.getElementById('pdf-download-link');
+    if (data.pdfUrl) {
+        pdfLink.href = data.pdfUrl;
+        pdfLink.download = `${data.title}.pdf`;
+        pdfLink.style.display = 'inline';
+    } else {
+        pdfLink.style.display = 'none';
+    }
 
     // Update page title
     document.title = data.title + ' - Digital Forensic HQ';
