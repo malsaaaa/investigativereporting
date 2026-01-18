@@ -9,23 +9,14 @@ const investigationData = {
         author: "Yasmin Damia",
         category: "Data Breach",
         date: "January 17, 2026",
+        image: "https://via.placeholder.com/1000x600?text=Data+Breach+Security",
         excerpt: "Online Scams Target Victims Through Hacked Accounts and Malicious Links",
         body: `
-            <h2>Data Breaches and Scam Victims in Malaysia</h2>
             <p>In Malaysia, data breaches have become a major contributor to the increasing number of scam cases affecting both individuals and businesses.</p>
 
-            <h2>How Stolen Data is Exploited</h2>
             <p>When personal data such as names, identification numbers, phone numbers, bank details, and home addresses are leaked due to cyberattacks, insider misuse or weak data protection practices, the information often ends up in the hands of criminal networks.</p>
 
-            <h2>Common Scam Methods</h2>
-            <p>Scammers exploit this stolen data to carry out various forms of fraud including:</p>
-            <ul>
-                <li>Phishing emails crafted with personal information</li>
-                <li>Scam calls impersonating trusted organizations</li>
-                <li>Fake investment schemes targeting specific demographics</li>
-                <li>Identity theft using leaked identification numbers</li>
-                <li>Online impersonation through compromised accounts</li>
-            </ul>
+            <p>Scammers exploit this stolen data to carry out various forms of fraud including phishing emails, scam calls, fake investment schemes, identity theft and online impersonation. </p>
 
             <h2>How Your Data Gets Compromised</h2>
             <p>Data breaches occur through multiple vectors:</p>
@@ -73,6 +64,7 @@ const investigationData = {
         title: "Data Breach Investigation",
         category: "Investigation",
         date: "January 15, 2026",
+        image: "https://via.placeholder.com/1000x600?text=Database+Security+Breach",
         excerpt: "A major data breach affecting 500,000+ customer records has been thoroughly investigated and documented with complete forensic evidence.",
         body: `
             <h2>Overview</h2>
@@ -120,6 +112,7 @@ const investigationData = {
         title: "Phishing Campaign Exposed",
         category: "Investigation",
         date: "January 12, 2026",
+        image: "https://via.placeholder.com/1000x600?text=Phishing+Attack+Investigation",
         excerpt: "A sophisticated phishing campaign targeting multiple industries has been exposed and dismantled through forensic analysis.",
         body: `
             <h2>Overview</h2>
@@ -167,6 +160,7 @@ const investigationData = {
         title: "Credential Theft Ring Exposed",
         category: "Investigation",
         date: "January 8, 2026",
+        image: "https://via.placeholder.com/1000x600?text=Credential+Theft+Cybercrime",
         excerpt: "A comprehensive investigation into organized credential theft operations targeting businesses across Southeast Asia.",
         body: `
             <h2>Overview</h2>
@@ -242,6 +236,13 @@ function loadInvestigation() {
     
     document.getElementById('investigation-date').textContent = data.date + ' - 2:30 PM';
     document.querySelector('.investigation-category').textContent = data.category;
+
+    // Set image
+    const imageElement = document.querySelector('.investigation-featured-image img');
+    if (imageElement && data.image) {
+        imageElement.src = data.image;
+        imageElement.alt = data.title;
+    }
 
     // Set excerpt
     document.getElementById('investigation-excerpt').innerHTML = `<p>${data.excerpt}</p>`;
