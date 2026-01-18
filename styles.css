@@ -1367,6 +1367,7 @@ body {
     color: var(--accent-cyan);
     margin-bottom: 1rem;
     font-weight: 700;
+    text-align: center;
 }
 
 .teaser-title {
@@ -1379,6 +1380,7 @@ body {
     background-clip: text;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    text-align: center;
 }
 
 .teaser-description {
@@ -1387,6 +1389,9 @@ body {
     line-height: 1.8;
     margin-bottom: 0;
     max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .teaser-video-wrapper {
