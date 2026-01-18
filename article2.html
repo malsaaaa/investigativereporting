@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Breach Investigation - Digital Forensic HQ</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%2300d4ff' font-weight='bold'>◆</text></svg>" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="investigation-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Digital Forensic HQ</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a href="articles.html" class="nav-link dropdown-toggle">Articles</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="article1.html" class="dropdown-link">Article 1</a></li>
+                        <li><a href="article2.html" class="dropdown-link">Article 2</a></li>
+                        <li><a href="article3.html" class="dropdown-link">Article 3</a></li>
+                        <li><a href="article4.html" class="dropdown-link">Article 4</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="series.html" class="nav-link">Series</a></li>
+                <li class="nav-item"><a href="index.html#threats" class="nav-link">Data Illustration</a></li>
+                <li class="nav-item"><a href="index.html#cases" class="nav-link">Cases</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Investigation Content -->
+    <div class="investigation-page">
+        <div class="investigation-header">
+            <div class="investigation-category" id="investigation-category">INVESTIGATION</div>
+            <h1 class="investigation-title" id="investigation-title">Data Breach Investigation</h1>
+            <div class="investigation-meta">
+                <span class="investigation-author" id="investigation-author"></span>
+                <span class="investigation-date" id="investigation-date">January 15, 2026 - 2:30 PM</span>
+                <button class="share-button">Share</button>
+            </div>
+        </div>
+
+        <div class="investigation-container">
+            <div class="investigation-featured-image" id="investigation-image">
+                <img src="https://via.placeholder.com/1000x600?text=Database+Security+Breach" alt="Data Breach Investigation" />
+            </div>
+
+            <div class="investigation-content">
+                <div class="investigation-excerpt" id="investigation-excerpt">
+                    <p></p>
+                </div>
+
+                <div class="investigation-body" id="investigation-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Home -->
+    <div class="back-to-home">
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Digital Forensic HQ. All rights reserved.</p>
+            <p>Investigating cybercrime | Securing digital evidence</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module">
+        import { article2 } from './articles/article2.js';
+        
+        // Set title and meta
+        document.getElementById('investigation-title').textContent = article2.title;
+        document.getElementById('investigation-category').textContent = article2.category.toUpperCase();
+        
+        // Set author if it exists
+        const authorElement = document.getElementById('investigation-author');
+        if (article2.author) {
+            authorElement.textContent = 'By ' + article2.author + ' • ';
+            authorElement.style.display = 'inline';
+        } else {
+            authorElement.style.display = 'none';
+        }
+        
+        document.getElementById('investigation-date').textContent = article2.date + ' - 2:30 PM';
+        
+        // Set image
+        const imageElement = document.querySelector('.investigation-featured-image img');
+        if (imageElement && article2.image) {
+            imageElement.src = article2.image;
+            imageElement.alt = article2.title;
+        }
+
+        // Set excerpt
+        document.getElementById('investigation-excerpt').innerHTML = `<p>${article2.excerpt}</p>`;
+
+        // Set body
+        document.getElementById('investigation-body').innerHTML = article2.body;
+
+        // Share functionality
+        const shareButton = document.querySelector('.share-button');
+        if (shareButton) {
+            shareButton.addEventListener('click', function() {
+                const text = 'Check out this article: ' + article2.title;
+                if (navigator.share) {
+                    navigator.share({
+                        title: article2.title,
+                        text: text,
+                        url: window.location.href
+                    }).catch(err => console.log('Error sharing:', err));
+                } else {
+                    alert('Share: ' + text + '\n\n' + window.location.href);
+                }
+            });
+        }
+
+        // Initialize mobile menu
+        function initMobileMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (!hamburger) return;
+
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+
+        initMobileMenu();
+    </script>
+</body>
+</html>
