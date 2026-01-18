@@ -12,12 +12,6 @@ const investigationData = {
         image: "assets/Article 1_image1.png",
         excerpt: "Online Scams Target Victims Through Hacked Accounts and Malicious Links",
         body: `
-            <div class="featured-intro-section">
-                <img src="assets/Article 1_image1.png" alt="Data Breach and Scam Victims" class="intro-image" />
-                <div class="excerpt-highlight">
-                    <p class="excerpt-text">Online Scams Target Victims Through Hacked Accounts and Malicious Links</p>
-                </div>
-            </div>
 
             <p>In Malaysia, data breaches have become a major contributor to the increasing number of scam cases affecting both individuals and businesses.</p>
 
@@ -25,7 +19,13 @@ const investigationData = {
 
             <p>Scammers exploit this stolen data to carry out various forms of fraud including phishing emails, scam calls, fake investment schemes, identity theft and online impersonation. </p>
 
+            <div class="featured-intro-section">
+                <img src="assets/Article 1_image2.png" alt="Data Breach and Scam Victims" class="intro-image" />
+            </div>
 
+            <div class="excerpt">
+                <p class="excerpt-text">Online Scams Target Victims Through Hacked Accounts and Malicious Links</p>
+            </div>
         `,
         stats: {
             breaches: "500K+",

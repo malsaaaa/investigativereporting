@@ -146,10 +146,10 @@
     gap: 2rem;
     align-items: center;
     margin-bottom: 3rem;
-    padding: 1.5rem;
-    background: linear-gradient(135deg, rgba(106, 5, 114, 0.1) 0%, rgba(0, 212, 255, 0.05) 100%);
-    border: 1px solid rgba(0, 212, 255, 0.2);
-    border-radius: 5px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
 }
 
 .featured-intro-section .intro-image {
@@ -162,18 +162,18 @@
 }
 
 .excerpt-highlight {
-    padding: 1.5rem;
-    background: rgba(10, 14, 39, 0.8);
-    border-left: 4px solid var(--accent-magenta);
-    border-radius: 3px;
+    padding: 0;
+    background: transparent;
+    border-left: none;
+    border-radius: 0;
 }
 
 .excerpt-text {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--accent-cyan);
     line-height: 1.6;
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
     margin: 0;
 }
 
@@ -412,7 +412,7 @@
     .featured-intro-section {
         grid-template-columns: 1fr;
         gap: 1rem;
-        padding: 1rem;
+        padding: 0;
     }
 
     .featured-intro-section .intro-image {
@@ -420,11 +420,11 @@
     }
 
     .excerpt-highlight {
-        padding: 1rem;
+        padding: 0;
     }
 
     .excerpt-text {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .investigation-page {
