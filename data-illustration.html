@@ -262,6 +262,37 @@
         </div>
     </section>
 
+    <!-- Scam Attack Methods Section -->
+    <section class="di-section">
+        <div class="di-container">
+            <div class="section-header-alt">
+                <h2 class="section-title-alt">SCAM ATTACK METHODS</h2>
+            </div>
+
+            <p class="di-text">Understanding how scammers attack and what information they target is crucial to your defense. Our survey of 108 victims reveals the most common attack channels and the types of personal information most frequently compromised.</p>
+
+            <div class="bar-charts-container">
+                <div class="bar-chart-wrapper">
+                    <h3 class="chart-title">If you have experienced a scam, through which channel did it occur?</h3>
+                    <p class="chart-subtitle">108 responses</p>
+                    <div class="bar-chart-canvas-wrapper">
+                        <canvas id="channelChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-divider-vertical"></div>
+
+                <div class="bar-chart-wrapper">
+                    <h3 class="chart-title">What personal information did the scammer know about you?</h3>
+                    <p class="chart-subtitle">108 responses</p>
+                    <div class="bar-chart-canvas-wrapper">
+                        <canvas id="infoChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Sources Section -->
     <section class="sources-section">
         <div class="di-container">
@@ -368,6 +399,144 @@
                     plugins: {
                         legend: {
                             display: false
+                        }
+                    }
+                }
+            });
+
+            // Initialize Channel Chart (horizontal bar)
+            const channelCtx = document.getElementById('channelChart').getContext('2d');
+            new Chart(channelCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Phone call', 'SMS', 'WhatsApp', 'Social media', 'Email', 'Never experienced'],
+                    datasets: [{
+                        label: 'Number of responses',
+                        data: [60, 25, 20, 27, 18, 8],
+                        backgroundColor: [
+                            '#6b0572',
+                            '#9d1f8e',
+                            '#c82aa4',
+                            '#ff006e',
+                            '#d946ef',
+                            '#a855f7'
+                        ],
+                        borderColor: '#0a0e27',
+                        borderWidth: 2,
+                        hoverBackgroundColor: '#00d4ff'
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const total = 108;
+                                    const percentage = ((context.parsed.x / total) * 100).toFixed(1);
+                                    return context.parsed.x + ' (' + percentage + '%)';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 70,
+                            ticks: {
+                                color: '#00d4ff',
+                                font: {
+                                    size: 12
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(0, 212, 255, 0.1)'
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                color: '#00d4ff',
+                                font: {
+                                    size: 12,
+                                    weight: 'bold'
+                                }
+                            },
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Initialize Info Chart (horizontal bar)
+            const infoCtx = document.getElementById('infoChart').getContext('2d');
+            new Chart(infoCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Phone number', 'IC number', 'Home address', 'Bank details'],
+                    datasets: [{
+                        label: 'Number of responses',
+                        data: [64, 25, 27, 20],
+                        backgroundColor: [
+                            '#6b0572',
+                            '#9d1f8e',
+                            '#c82aa4',
+                            '#ff006e'
+                        ],
+                        borderColor: '#0a0e27',
+                        borderWidth: 2,
+                        hoverBackgroundColor: '#00d4ff'
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const total = 108;
+                                    const percentage = ((context.parsed.x / total) * 100).toFixed(1);
+                                    return context.parsed.x + ' (' + percentage + '%)';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 70,
+                            ticks: {
+                                color: '#00d4ff',
+                                font: {
+                                    size: 12
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(0, 212, 255, 0.1)'
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                color: '#00d4ff',
+                                font: {
+                                    size: 12,
+                                    weight: 'bold'
+                                }
+                            },
+                            grid: {
+                                display: false
+                            }
                         }
                     }
                 }
