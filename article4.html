@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article 4 - Investigative Reporting</title>
+    <title>Scams Are Not a System, Not Isolated Crimes - Investigative Reporting</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%2300d4ff' font-weight='bold'>◆</text></svg>" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="investigation-styles.css">
@@ -42,8 +42,14 @@
     <!-- Article Page -->
     <section class="investigation-page">
         <div class="investigation-container">
-            <div class="investigation-header" id="header"></div>
-            <div class="investigation-category" id="category"></div>
+            <div class="investigation-header-custom">
+                <span class="header-badge">SCAM ANALYSIS</span>
+                <h1 class="investigation-title-custom">Scams Are Not a System, Not Isolated Crimes</h1>
+                <div class="header-meta">
+                    <span class="header-author">By Annisa' Azlan</span>
+                    <button class="share-button" onclick="shareArticle()">Share</button>
+                </div>
+            </div>
             <div class="investigation-content" id="content"></div>
         </div>
     </section>
@@ -63,6 +69,29 @@
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script>
+        function shareArticle() {
+            const title = 'Scams Are Not a System, Not Isolated Crimes';
+            const url = window.location.href;
+            const text = `Check out this article: ${title}`;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: title,
+                    text: text,
+                    url: url
+                }).catch(err => console.log('Share failed:', err));
+            } else {
+                // Fallback: copy to clipboard
+                const shareText = `${title}\n${url}`;
+                navigator.clipboard.writeText(shareText).then(() => {
+                    alert('Article link copied to clipboard!');
+                }).catch(() => {
+                    alert('Share not supported on this browser. URL: ' + url);
+                });
+            }
+        }
+    </script>
     <script type="module">
         import { article4 } from './articles/article4.js';
 
@@ -91,17 +120,7 @@
             initMobileMenu();
 
             // Populate article data
-            const headerElement = document.getElementById('header');
-            const categoryElement = document.getElementById('category');
             const contentElement = document.getElementById('content');
-
-            if (headerElement) {
-                headerElement.innerHTML = `<h1 class="investigation-title">${article4.title}</h1>`;
-            }
-
-            if (categoryElement) {
-                categoryElement.innerHTML = `<span class="investigation-cat">${article4.category}</span>`;
-            }
 
             if (contentElement) {
                 const excerpt = article4.excerpt ? `<div class="investigation-excerpt"><p>${article4.excerpt}</p></div>` : '';
