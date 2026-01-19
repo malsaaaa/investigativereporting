@@ -62,6 +62,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <script type="module">
         import { article4 } from './articles/article4.js';
 
@@ -111,10 +112,65 @@
                     </div>
                     ${excerpt}
                     <div class="investigation-body">
+                        <div class="scam-chart-container">
+                            <div class="chart-wrapper-single">
+                                <h3 class="chart-title">Percentage of people who have been scammed in Malaysia</h3>
+                                <div class="chart-canvas-wrapper">
+                                    <canvas id="scamChart"></canvas>
+                                </div>
+                                <div class="chart-stats">
+                                    <div class="stat-badge yes">
+                                        <span class="stat-value">78.4%</span>
+                                        <span class="stat-label">Yes</span>
+                                    </div>
+                                    <div class="stat-badge no">
+                                        <span class="stat-value">10.2%</span>
+                                        <span class="stat-label">No</span>
+                                    </div>
+                                    <div class="stat-badge maybe">
+                                        <span class="stat-value">5.4%</span>
+                                        <span class="stat-label">Maybe</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         ${article4.body}
                     </div>
                 `;
             }
+
+            // Initialize Scam Chart
+            setTimeout(() => {
+                const scamCtx = document.getElementById('scamChart');
+                if (scamCtx) {
+                    new Chart(scamCtx.getContext('2d'), {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Yes', 'No', 'Maybe'],
+                            datasets: [{
+                                data: [78.4, 10.2, 11.4],
+                                backgroundColor: [
+                                    '#003d9e',
+                                    '#c1272d',
+                                    '#ffa500'
+                                ],
+                                borderColor: '#0a0e27',
+                                borderWidth: 3,
+                                hoverOffset: 10
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: true,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            }
+                        }
+                    });
+                }
+            }, 100);
         });
     </script>
 </body>

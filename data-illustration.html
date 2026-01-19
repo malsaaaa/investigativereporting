@@ -57,27 +57,6 @@
             <p class="di-text">Our survey of 74-108 individuals reveals a critical vulnerability pattern: <span class="highlight-important">users who rely on autofill features for password management are significantly more susceptible to scam attacks</span>. The correlation between convenience and security risk is striking.</p>
 
             <div class="charts-container">
-                <div class="chart-wrapper">
-                    <h3 class="chart-title">Percentage of people who have been scammed in Malaysia</h3>
-                    <div class="chart-canvas-wrapper">
-                        <canvas id="scamChart"></canvas>
-                    </div>
-                    <div class="chart-stats">
-                        <div class="stat-badge yes">
-                            <span class="stat-value">78.4%</span>
-                            <span class="stat-label">Yes</span>
-                        </div>
-                        <div class="stat-badge no">
-                            <span class="stat-value">10.2%</span>
-                            <span class="stat-label">No</span>
-                        </div>
-                        <div class="stat-badge maybe">
-                            <span class="stat-value">5.4%</span>
-                            <span class="stat-label">Maybe</span>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="chart-divider"></div>
 
                 <div class="chart-wrapper">
@@ -314,35 +293,6 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             initMobileMenu();
-
-            // Initialize Scam Chart
-            const scamCtx = document.getElementById('scamChart').getContext('2d');
-            new Chart(scamCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Yes', 'No', 'Maybe'],
-                    datasets: [{
-                        data: [78.4, 10.2, 11.4],
-                        backgroundColor: [
-                            '#003d9e',
-                            '#c1272d',
-                            '#ffa500'
-                        ],
-                        borderColor: '#0a0e27',
-                        borderWidth: 3,
-                        hoverOffset: 10
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    }
-                }
-            });
 
             // Initialize Autofill Chart
             const autofillCtx = document.getElementById('autofillChart').getContext('2d');
