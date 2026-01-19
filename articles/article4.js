@@ -1,11 +1,10 @@
 // Article 4 - Scams Are Not a System, Not Isolated Crimes
 export const article4 = {
     title: "Scams Are Not a System, Not Isolated Crimes",
-    author: "Annisa' Azlan",
     category: "Systemic Analysis",
     excerpt: "Understanding how scams have evolved from isolated incidents into a sustained national pattern—and why current protective frameworks are failing",
     body: `
-    
+
         <h3>A Growing and Entrenched Crime Pattern</h3>
         <p style="text-align: justify;">Scam activity in Malaysia has shifted from isolated criminal incidents into a sustained national pattern, with official data showing consistent case volumes across reporting periods rather than temporary spikes.</p>
         
