@@ -80,6 +80,56 @@ export const article4 = {
         
         <p style="text-align: justify;">The data indicates public awareness campaigns have limited effect when victims face real-time psychological pressure rather than abstract warnings.</p>
 
+        <div class="responsibility-chart-container">
+            <div class="chart-wrapper-side-by-side">
+                <div class="chart-column">
+                    <h3 class="chart-title">Responsibility for Data Breaches</h3>
+                    <p style="text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0;">Who should be held responsible when personal data breaches occur?</p>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="responsibilityChart"></canvas>
+                    </div>
+                    <div class="chart-stats">
+                        <div class="stat-badge">
+                            <span class="stat-value">14.3%</span>
+                            <span class="stat-label">Companies</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-value">24.1%</span>
+                            <span class="stat-label">Authorities</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-value">15.2%</span>
+                            <span class="stat-label">Individuals</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-value">46.4%</span>
+                            <span class="stat-label">All Parties</span>
+                        </div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.85rem; color: var(--accent-cyan); margin-top: 1rem;">112 responses</p>
+                </div>
+
+                <div class="chart-column">
+                    <h3 class="chart-title">Data Protection Seriousness</h3>
+                    <p style="text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin: 0.5rem 0;">Do you think organizations in Malaysia take personal data protection seriously enough?</p>
+                    <div class="chart-canvas-wrapper">
+                        <canvas id="protectionChart"></canvas>
+                    </div>
+                    <div class="chart-stats">
+                        <div class="stat-badge yes">
+                            <span class="stat-value">37.5%</span>
+                            <span class="stat-label">Yes</span>
+                        </div>
+                        <div class="stat-badge no">
+                            <span class="stat-value">62.5%</span>
+                            <span class="stat-label">No</span>
+                        </div>
+                    </div>
+                    <p style="text-align: center; font-size: 0.85rem; color: var(--accent-cyan); margin-top: 1rem;">112 responses</p>
+                </div>
+            </div>
+        </div>
+
         <h3>A System That Reacts Too Late</h3>
         <p style="text-align: justify;">Statistical patterns point to a protection framework that intervenes mainly after losses occur rather than preventing transactions at the point of risk.</p>
         

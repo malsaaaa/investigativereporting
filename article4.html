@@ -249,6 +249,68 @@
                         }
                     });
                 }
+
+                // Initialize Responsibility Chart
+                const responsibilityCtx = document.getElementById('responsibilityChart');
+                if (responsibilityCtx) {
+                    new Chart(responsibilityCtx.getContext('2d'), {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Companies', 'Authorities', 'Individuals', 'All Parties'],
+                            datasets: [{
+                                data: [14.3, 24.1, 15.2, 46.4],
+                                backgroundColor: [
+                                    '#003d9e',
+                                    '#c1272d',
+                                    '#ffa500',
+                                    '#00c851'
+                                ],
+                                borderColor: '#0a0e27',
+                                borderWidth: 3,
+                                hoverOffset: 10
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: true,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Initialize Protection Chart
+                const protectionCtx = document.getElementById('protectionChart');
+                if (protectionCtx) {
+                    new Chart(protectionCtx.getContext('2d'), {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Yes', 'No'],
+                            datasets: [{
+                                data: [37.5, 62.5],
+                                backgroundColor: [
+                                    '#003d9e',
+                                    '#c1272d'
+                                ],
+                                borderColor: '#0a0e27',
+                                borderWidth: 3,
+                                hoverOffset: 10
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: true,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            }
+                        }
+                    });
+                }
             }, 100);
         });
     </script>
