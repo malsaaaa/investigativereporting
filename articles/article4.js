@@ -45,6 +45,27 @@ export const article4 = {
         
         <p style="text-align: justify;"><strong>Investment-related scams continue to record significant impact</strong>, driven by narratives of certainty, exclusivity and time pressure that override rational risk assessment.</p>
 
+        <div class="trust-chart-container">
+            <div class="chart-wrapper-single">
+                <h3 class="chart-title">Impact on Trust in Digital Services</h3>
+                <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin: 0.5rem 0;">The rise in scam calls has affected my trust in digital services such as online banking or e-commerce.</p>
+                <div class="chart-canvas-wrapper">
+                    <canvas id="trustChart"></canvas>
+                </div>
+                <div class="chart-stats">
+                    <div class="stat-badge yes">
+                        <span class="stat-value">92%</span>
+                        <span class="stat-label">Strongly Agree</span>
+                    </div>
+                    <div class="stat-badge no">
+                        <span class="stat-value">8%</span>
+                        <span class="stat-label">Disagree</span>
+                    </div>
+                </div>
+                <p style="text-align: center; font-size: 0.85rem; color: var(--accent-cyan); margin-top: 1rem;">112 responses</p>
+            </div>
+        </div>
+
         <h3>Financial Impact and Loss Patterns</h3>
         <p style="text-align: justify;">Loss data reveals a divide between scam types that generate high case volumes with smaller individual losses and those involving fewer cases but substantially higher financial damage.</p>
         

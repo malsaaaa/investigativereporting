@@ -219,6 +219,36 @@
                         }
                     });
                 }
+
+                // Initialize Trust Chart
+                const trustCtx = document.getElementById('trustChart');
+                if (trustCtx) {
+                    new Chart(trustCtx.getContext('2d'), {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Strongly Agree', 'Disagree'],
+                            datasets: [{
+                                data: [92, 8],
+                                backgroundColor: [
+                                    '#003d9e',
+                                    '#c1272d'
+                                ],
+                                borderColor: '#0a0e27',
+                                borderWidth: 3,
+                                hoverOffset: 10
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: true,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            }
+                        }
+                    });
+                }
             }, 100);
         });
     </script>
