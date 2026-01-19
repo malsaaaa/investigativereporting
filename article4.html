@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article 4 - Investigative Reporting</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%2300d4ff' font-weight='bold'>◆</text></svg>" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="investigation-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Investigative Reporting</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a href="articles.html" class="nav-link dropdown-toggle">Articles</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="article1.html" class="dropdown-link">Article 1</a></li>
+                        <li><a href="article2.html" class="dropdown-link">Article 2</a></li>
+                        <li><a href="article3.html" class="dropdown-link">Article 3</a></li>
+                        <li><a href="article4.html" class="dropdown-link">Article 4</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="series.html" class="nav-link">Series</a></li>
+                <li class="nav-item"><a href="data-illustration.html" class="nav-link">Data Illustration</a></li>
+                <li class="nav-item"><a href="cases.html" class="nav-link">Cases</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Page -->
+    <section class="investigation-page">
+        <div class="investigation-container">
+            <div class="investigation-header" id="header"></div>
+            <div class="investigation-category" id="category"></div>
+            <div class="investigation-content" id="content"></div>
+        </div>
+    </section>
+
+    <!-- Back to Articles -->
+    <div class="back-to-articles">
+        <a href="articles.html" class="back-link">← Back to Articles</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Investigative Reporting. All rights reserved.</p>
+            <p>Investigating cybercrime | Securing digital evidence</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module">
+        import { article4 } from './articles/article4.js';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize mobile menu
+            function initMobileMenu() {
+                const hamburger = document.getElementById('hamburger');
+                const navMenu = document.querySelector('.nav-menu');
+
+                if (!hamburger) return;
+
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+
+            initMobileMenu();
+
+            // Populate article data
+            const headerElement = document.getElementById('header');
+            const categoryElement = document.getElementById('category');
+            const contentElement = document.getElementById('content');
+
+            if (headerElement) {
+                headerElement.innerHTML = `<h1 class="investigation-title">${article4.title}</h1>`;
+            }
+
+            if (categoryElement) {
+                categoryElement.innerHTML = `<span class="investigation-cat">${article4.category}</span>`;
+            }
+
+            if (contentElement) {
+                const excerpt = article4.excerpt ? `<div class="investigation-excerpt"><p>${article4.excerpt}</p></div>` : '';
+                const author = article4.author ? `<p class="investigation-author">By ${article4.author}</p>` : '';
+                contentElement.innerHTML = `
+                    <div class="investigation-meta">
+                        ${author}
+                    </div>
+                    ${excerpt}
+                    <div class="investigation-body">
+                        ${article4.body}
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
