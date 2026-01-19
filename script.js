@@ -1,5 +1,5 @@
 // ===========================
-// Digital Forensic HQ - JavaScript
+// Investigative Reporting - JavaScript
 // ===========================
 
 document.addEventListener('DOMContentLoaded', function() {

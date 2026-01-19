@@ -1,100 +1,89 @@
-// Article 1 - One Click Away: How Data Breaches Turn Users into Scam Victims
+// Article 1 - Scams Are Not A System, Not Isolated Crimes
 export const article1 = {
-    title: "One Click Away: How Data Breaches Turn Users into Scam Victims",
-    author: "Yasmin Damia",
-    category: "Data Breach",
+    title: "Scams Are Not A System, Not Isolated Crimes",
+    author: "Annisa' Azlan",
+    category: "Scam Analysis",
 
-    image: "assets/Article 1_image1.png",
-    excerpt: "Online Scams Target Victims Through Hacked Accounts and Malicious Links",
+    image: "assets/Article1_hero.png",
+    excerpt: "From Data Leaks to Scam Calls: How Stolen Information Reaches Criminal Networks",
     body: `
+        <h2 class="section-heading">A Growing and Entrenched Crime Pattern</h2>
+        
+        <p style="text-align: justify;">Scam activity in Malaysia has shifted from isolated criminal incidents into a sustained national pattern, with official data showing consistent case volumes across reporting periods rather than temporary spikes.</p>
 
-        <p style="text-align: justify;">In Malaysia, data breaches have become a major contributor to the increasing number of scam cases affecting both individuals and businesses.</p>
+        <p style="text-align: justify;">The persistence of reported scam cases over multiple years indicates the crime has become structurally embedded, adapting to enforcement pressure instead of declining.</p>
 
-        <p style="text-align: justify;">When personal data such as names, identification numbers, phone numbers, bank details, and home addresses are leaked due to cyberattacks, insider misuse or weak data protection practices, the information often ends up in the hands of criminal networks.</p>
+        <p style="text-align: justify;">Statistical trends suggest scam operations are no longer opportunistic but organised around repeatable and scalable models.</p>
 
-        <p style="text-align: justify;">Scammers exploit this stolen data to carry out various forms of fraud including phishing emails, scam calls, fake investment schemes, identity theft and online impersonation. </p>
+        <h3 class="subsection-heading">Who Is Being Targeted</h3>
+        
+        <p style="text-align: justify;">Data breakdowns show scam victims come from a wide range of age groups, income levels and occupational backgrounds, contradicting the belief that scams affect only a narrow demographic.</p>
 
-        <div class="featured-intro-section">
-            <img src="assets/Article 1_image2.png" alt="Data Breach and Scam Victims" class="intro-image" />
-        </div>
-        <div class="excerpt">
-            <p class="excerpt-text">Ahmad Azman Azlan, Ethical Hacker and Digital Security Expert</p>
-        </div>
+        <p style="text-align: justify;">The spread of victim profiles indicates vulnerability is driven less by digital literacy and more by situational exposure and emotional manipulation.</p>
 
-        <h4>ANDROID PACKAGE KIT (APK) FILE ATTACKS ON DEVICES</h4>
-        <p style="text-align: justify;">According to Ahmad Azman Adlan, 52, an ethical hacker and Cybersecurity instructor who serves as a Subject Matter Expert (SME) in hacking and digital security, the most common cause of account compromise is the installation of malicious Android Package Kit (APK) files format.</p>
+        <p style="text-align: justify;">This diversification of victims points to scam strategies designed to penetrate everyday financial and social interactions rather than marginal groups alone.</p>
 
-        <p style="text-align: justify;">Based on more than 10,000 cases he has handled, APK-based attacks remain the primary method used by hackers, particularly against Android users.</p>
+        <h3 class="subsection-heading">How the Scams Work</h3>
+        
+        <p style="text-align: justify;">Statistics by scam category show psychological manipulation remains the core mechanism, with fear, urgency, authority and reward used to trigger rapid decision-making.</p>
 
-        <p style="text-align: justify;">"Victims often receive suspicious links through platforms such as Telegram and WhatsApp</p>
+        <p style="text-align: justify;">Impersonation scams feature prominently, reflecting systematic abuse of trust in institutions, officials and family service providers.</p>
 
-        <p style="text-align: justify;">"These links may appear legitimate, such as links claiming to offer government assistance (for example, "Bantuan Madani")</p>
+        <p style="text-align: justify;">Investment-related scams continue to record significant impact, driven by narratives of certainty, exclusivity and time pressure that override rational risk assessment.</p>
 
-        <p style="text-align: justify;">"Once clicked, users are redirected to fake websites that prompt them to provide their phone numbers.</p>
+        <h3 class="subsection-heading">Financial Impact and Loss Patterns</h3>
+        
+        <p style="text-align: justify;">Loss data reveals a divide between scam types that generate high case volumes with smaller individual losses and those involving fewer cases but substantially higher financial damage.</p>
 
-        <p style="text-align: justify;">"Subsequently, a malicious APK file is downloaded onto their device and this allows hackers to take over messaging applications such as WhatsApp or Telegram</p>
+        <p style="text-align: justify;">This uneven distribution indicates scam networks deliberately diversify operations to balance volume-based extraction with high-value targeting.</p>
 
-        <p style="text-align: justify;">"When users install the APK file and grant the requested permissions, the application is able to steal verification codes sent via SMS or voice calls.</p>
+        <p style="text-align: justify;">The cumulative effect of these losses reflects a sustained drain on household finances rather than isolated financial shocks.</p>
 
-        <p style="text-align: justify;">"In WhatsApp cases, the original account owner is usually logged out completely, while in Telegram cases, hackers may remain logged into the same account simultaneously without the owner being logged out," he said in the interview.</p>
+        <h3 class="subsection-heading">Why the Problem Persists</h3>
+        
+        <p style="text-align: justify;">The recurrence of similar scam structures across reporting periods suggests enforcement actions have not meaningfully disrupted the underlying scam ecosystem.</p>
 
-        <p style="text-align: justify;">Azman explained APK file attacks primarily affect Android devices, as iPhones do not recognize or support APK files thus this makes iPhones relatively safer from this specific method of attack.</p>
+        <p style="text-align: justify;">Official figures likely understate the true scale of the problem due to underreporting, delayed complaints and victims' reluctance to come forward.</p>
 
-        <p style="text-align: justify;">"However, Android devices can still be protected if users install reputable antivirus software and avoid downloading files from unknown or unverified sources." he added.</p>
-        <p style="text-align: justify;">Azman further highlighted that once Telegram accounts are compromised, hackers gain access to all existing data, including chat histories, images, videos, contacts and documents.</p>
+        <p style="text-align: justify;">The data indicates public awareness campaigns have limited effect when victims face real-time psychological pressure rather than abstract warnings.</p>
 
-        <p style="text-align: justify;">"This information is often used for blackmail, where victims are threatened with the exposure of private or sensitive content, including personal or explicit images." Azman stated.</p>
+        <h3 class="subsection-heading">A System That Reacts Too Late</h3>
+        
+        <p style="text-align: justify;">Statistical patterns point to a protection framework that intervenes mainly after losses occur rather than preventing transactions at the point of vulnerability.</p>
 
-        <h2 class="section-heading">MODUS OPERANDI OF HACKERS</h2>
-        <p style="text-align: justify;">Sharing about the common modus operandi for hackers to steal the public data, Azman said it begins with APK installation.</p>
+        <p style="text-align: justify;">Gaps in coordination between enforcement agencies, financial institutions and digital service providers allow scam activities to proceed with minimal interruption.</p>
 
-        <p style="text-align: justify;">"Once the account is hijacked, hackers gain access to the victim's contact list and group chats, such as family groups, mosque groups, or workplace groups.</p>
+        <p style="text-align: justify;">Taken together, the data frames scam crime as a systemic failure rooted in predictable psychological exploitation and insufficient preventive safeguards rather than individual negligence.</p>
 
-        <p style="text-align: justify;">"These groups then become targets for further scams. Hackers impersonate the victim and request urgent loans, typically asking for amounts such as RM1,500, promising repayment the next day, and providing bank account details for transfers," he explained.</p>
+        <h2 class="section-heading">Public Trust in Digital Services</h2>
+        
+        <p style="text-align: justify;"><strong>Key Finding:</strong> 92.6% of survey respondents reported that the rise in scam calls has affected their trust in digital services such as online banking or e-commerce.</p>
 
-        <p style="text-align: justify;">In addition, compromised WhatsApp accounts are often used to spread malicious APK files to other contacts, creating a continuous chain of victims.</p>
+        <p style="text-align: justify;">This erosion of confidence demonstrates how widespread scam activity damages the broader digital ecosystem, extending impact beyond immediate victims to reshape public behavior and institutional credibility.</p>
 
-        <p style="text-align: justify;">Azman noted that between 2021 and 2022, Telegram was the platform most frequently targeted. However, after November 2023, WhatsApp introduced new features such as multi-account registration, particularly on Android devices.</p>
+        <h2 class="section-heading">Responsibility and Accountability</h2>
+        
+        <p style="text-align: justify;"><strong>Key Finding:</strong> When asked who should be held responsible for personal data breaches, respondents distributed accountability across multiple actors:</p>
 
-        <p style="text-align: justify;">"Android phones can now register up to three WhatsApp Messenger accounts and one WhatsApp Business account on a single device, which has inadvertently increased security risks if verification codes are intercepted.</p>
+        <ul style="text-align: justify;">
+            <li><strong>47.2%</strong> believe all parties share responsibility</li>
+            <li><strong>22.2%</strong> point to government authorities and police</li>
+            <li><strong>15.7%</strong> identify individuals themselves</li>
+            <li><strong>14.9%</strong> attribute responsibility to companies and organizations</li>
+        </ul>
 
-        <p style="text-align: justify;">"By contrast, iPhones only allow one WhatsApp Messenger number and one WhatsApp Business number per device, and they are not vulnerable to APK-based attacks.</p>
+        <p style="text-align: justify;">This fragmented accountability perception suggests confusion about institutional roles, undermining coordinated responses to data protection failures.</p>
 
-        <p style="text-align: justify;">"This explains why most WhatsApp hacking cases involve Android users," he explained further.</p>
+        <h2 class="section-heading">Organizational Data Protection Standards</h2>
+        
+        <p style="text-align: justify;"><strong>Key Finding:</strong> 63% of respondents believe organizations in Malaysia do NOT take personal data protection seriously enough.</p>
 
-        <p style="text-align: justify;">Azman said the ultimate objective of hackers is financial gain so platforms such as WhatsApp and Telegram are particularly effective for scams because they enable direct communication with trusted contacts.</p>
+        <p style="text-align: justify;">This widespread skepticism indicates that institutional failures to secure data undermine public confidence in digital service providers and expose systemic vulnerabilities in Malaysia's data protection framework.</p>
 
-        <p style="text-align: justify;">"Hackers use compromised accounts to invite contacts into fake investment groups, promising unrealistic returns such as turning RM300 into RM10,000. Victims are more likely to trust these schemes when they see familiar contacts already participating," he added.</p>
+        <h2 class="section-heading">Conclusion: A Systemic Challenge</h2>
+        
+        <p style="text-align: justify;">The evidence points to scam crime in Malaysia as neither isolated nor random, but as a sustained, organised and increasingly normalised system of financial extraction that exploits predictable human psychology and systemic gaps in data protection, institutional coordination and preventive infrastructure.</p>
 
-        <p style="text-align: justify;">In WhatsApp cases, the original owner is locked out, and hackers block re-login attempts for 12 hours according to Azman.</p>
-
-        <p style="text-align: justify;">"During this period, they send mass messages and broadcast requests for money. After 12 hours, the block is renewed, making account recovery extremely difficult.</p>
-
-        <p style="text-align: justify;">""Recovering a hacked account, especially one compromised through APK files, is highly challenging and often requires identifying and removing the malicious application.</p>
-
-        <p style="text-align: justify;">"Many victims resort to filing police reports or terminating their phone numbers altogether," he said.</p>
-
-        <p style="text-align: justify;">Azman also pointed out that many scam operations are run by syndicates based overseas, making them difficult to prosecute.</p>
-
-        <p style="text-align: justify;">"These criminals convert stolen funds into cryptocurrencies to avoid detection, as digital assets leave fewer traces compared to cash withdrawals, ATM transactions, or bank transfers monitored by CCTV and financial systems," he noted.</p>
-
-        <p style="text-align: justify;">Beyond financial losses, cyber scams and blackmail cases have severe social and emotional consequences, including family breakdowns and psychological distress.</p>
-
-        <div class="image-with-caption">
-            <img src="assets/Article 1_image3.png" alt="Best Practices for Online Security" class="practices-image" />
-            <p class="image-caption">Online Security Tips</p>
-        </div>
-
-        <p style="text-align: justify;">Users are advised to limit the exposure of personal data by avoiding the use of full legal names on social media, using privacy settings effectively, and disabling open invitations on platforms such as Telegram.</p>
-
-        <p style="text-align: justify;">Ultimately, while anyone can become a victim of scams, informed and cautious users are better equipped to protect themselves.</p>
-
-        <p style="text-align: justify;">Continuous education, especially among younger users and community leaders, is essential to reducing the spread and impact of cybercrime.</p>
-    `,
-    stats: {
-        breaches: "500K+",
-        victims: "Ongoing",
-        recovered: "In Progress"
-    },
-    tags: ["data-breach", "scam", "fraud", "cybercrime", "protection"]
+        <p style="text-align: justify;">Addressing this requires shifting from reactive victim support to proactive system redesign.</p>
+    `
 };
