@@ -189,6 +189,36 @@
                         }
                     });
                 }
+
+                // Initialize Autofill Chart
+                const autofillCtx = document.getElementById('autofillChart');
+                if (autofillCtx) {
+                    new Chart(autofillCtx.getContext('2d'), {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Yes', 'No'],
+                            datasets: [{
+                                data: [67.6, 32.4],
+                                backgroundColor: [
+                                    '#003d9e',
+                                    '#c1272d'
+                                ],
+                                borderColor: '#0a0e27',
+                                borderWidth: 3,
+                                hoverOffset: 10
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: true,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            }
+                        }
+                    });
+                }
             }, 100);
         });
     </script>

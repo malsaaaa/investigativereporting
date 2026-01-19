@@ -19,6 +19,25 @@ export const article4 = {
         
         <p style="text-align: justify;">This diversification of victims points to scam strategies designed to penetrate everyday financial and social interactions rather than marginal groups alone.</p>
 
+        <div class="autofill-chart-container">
+            <div class="chart-wrapper-single">
+                <h3 class="chart-title">Autofill Password Usage</h3>
+                <div class="chart-canvas-wrapper">
+                    <canvas id="autofillChart"></canvas>
+                </div>
+                <div class="chart-stats">
+                    <div class="stat-badge yes">
+                        <span class="stat-value">67.6%</span>
+                        <span class="stat-label">Yes</span>
+                    </div>
+                    <div class="stat-badge no">
+                        <span class="stat-value">32.4%</span>
+                        <span class="stat-label">No</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <h3>How the Scams Work</h3>
         <p style="text-align: justify;">Statistics by scam category show psychological manipulation remains the core mechanism, with fear, urgency, authority and reward used to trigger rapid decision-making.</p>
         

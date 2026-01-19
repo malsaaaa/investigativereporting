@@ -926,6 +926,15 @@
     letter-spacing: 1px;
 }
 
+.autofill-chart-container {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(106, 5, 114, 0.1) 0%, rgba(0, 212, 255, 0.05) 100%);
+    border: 2px solid rgba(0, 212, 255, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
+}
+
 @media (max-width: 768px) {
     .scam-chart-container {
         padding: 1.5rem;

@@ -58,23 +58,6 @@
 
             <div class="charts-container">
                 <div class="chart-divider"></div>
-
-                <div class="chart-wrapper">
-                    <h3 class="chart-title">Autofill Password Usage</h3>
-                    <div class="chart-canvas-wrapper">
-                        <canvas id="autofillChart"></canvas>
-                    </div>
-                    <div class="chart-stats">
-                        <div class="stat-badge yes">
-                            <span class="stat-value">67.6%</span>
-                            <span class="stat-label">Yes</span>
-                        </div>
-                        <div class="stat-badge no">
-                            <span class="stat-value">32.4%</span>
-                            <span class="stat-label">No</span>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div class="vulnerability-insight">
@@ -293,34 +276,6 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             initMobileMenu();
-
-            // Initialize Autofill Chart
-            const autofillCtx = document.getElementById('autofillChart').getContext('2d');
-            new Chart(autofillCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Yes', 'No'],
-                    datasets: [{
-                        data: [67.6, 32.4],
-                        backgroundColor: [
-                            '#003d9e',
-                            '#c1272d'
-                        ],
-                        borderColor: '#0a0e27',
-                        borderWidth: 3,
-                        hoverOffset: 10
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    }
-                }
-            });
 
             // Initialize Channel Chart (horizontal bar)
             const channelCtx = document.getElementById('channelChart').getContext('2d');
